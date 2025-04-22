@@ -1,6 +1,6 @@
 import { Schema, Connection } from 'mongoose';
 
-import { IOrderFalabella, IProduct } from '../types';
+import { IOrderFalabella } from '../types';
 
 export const orderFalabellaSchema = new Schema<IOrderFalabella>({
   enterpriseId: { type: String, required: true },

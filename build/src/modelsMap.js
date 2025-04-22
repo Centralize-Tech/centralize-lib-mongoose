@@ -37,4 +37,5 @@ exports.modelCreatorsMap = void 0;
 const model = __importStar(require("./models"));
 exports.modelCreatorsMap = {
     OrderFalabella: model.createOrderFalabellaModel,
+    Message: model.createMessageModel,
 };

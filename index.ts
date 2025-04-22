@@ -27,3 +27,4 @@ function createModelProxy(modelName: keyof typeof modelCreatorsMap) {
 }
 
 export const OrderFalabella = createModelProxy('OrderFalabella');
+export const Message = createModelProxy('Message');

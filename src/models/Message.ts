@@ -7,7 +7,7 @@ export const messageSchema = new Schema<IMessage>({
   content: { type: Object, required: true },
   createdBy: { type: String, required: true },
   enterpriseId: { type: String, required: true },
-});
+}, { timestamps: true });
 
 export function createMessageModel(conn: Connection) {
   return conn.model<IMessage>('Message', messageSchema);

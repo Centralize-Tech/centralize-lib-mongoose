@@ -36,6 +36,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.modelCreatorsMap = void 0;
 const model = __importStar(require("./models"));
 exports.modelCreatorsMap = {
-    OrderFalabella: model.createOrderFalabellaModel,
+    OrderMarketplace: model.createOrderMarketplaceModel,
     Message: model.createMessageModel,
 };

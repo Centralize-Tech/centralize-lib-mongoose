@@ -1,14 +1,17 @@
 import { Document } from 'mongoose';
 
-export interface IOrderFalabella extends Document {
+export interface IOrderMarketplace extends Document {
   enterpriseId: string,
   marketplace: string,
   orderId: string,
+  orderCreateDate: Date,
+  orderUpdateDate: Date,
   status: string,
   totalAmount: string,
   buyer: IBuyer,
   productsQuantity: string,
   products: Array<IProduct>,
+  businessInvoice: Object,
   payment: IPayment,
   shipping: IShipping,
   notes: string,

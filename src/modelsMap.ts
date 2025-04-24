@@ -1,6 +1,6 @@
 import * as model from './models';
 
 export const modelCreatorsMap = {
-  OrderFalabella: model.createOrderFalabellaModel,
+  OrderMarketplace: model.createOrderMarketplaceModel,
   Message: model.createMessageModel,
 };

@@ -26,5 +26,5 @@ function createModelProxy(modelName: keyof typeof modelCreatorsMap) {
   });
 }
 
-export const OrderFalabella = createModelProxy('OrderFalabella');
+export const OrderMarketplace = createModelProxy('OrderMarketplace');
 export const Message = createModelProxy('Message');

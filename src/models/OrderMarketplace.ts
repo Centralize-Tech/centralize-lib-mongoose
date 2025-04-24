@@ -30,9 +30,9 @@ export const orderMarketplaceSchema = new Schema<IOrderMarketplace>({
       unitPrice: { type: Number, required: true },
       totalPrice: { type: Number, required: true },
       productShopSku: { type: String, required: false, default: null },
-      shippingFrom: { type: Object, required: true, default: {} },
-      shippingPrice: { type: Number, required: true, default: 0 },
-      commission: { type: Number, required: true, default: 0 },
+      shippingFrom: { type: Object, required: false, default: {} },
+      shippingPrice: { type: Number, required: false, default: 0 },
+      commission: { type: Number, required: false, default: 0 },
     }
   ],
   businessInvoice: { type: Object, required: false, default: {} },

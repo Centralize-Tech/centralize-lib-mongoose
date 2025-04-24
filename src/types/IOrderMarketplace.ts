@@ -4,18 +4,18 @@ export interface IOrderMarketplace extends Document {
   enterpriseId: string,
   marketplace: string,
   orderId: string,
-  orderCreateDate: Date,
-  orderUpdateDate: Date,
+  orderCreateDate?: Date,
+  orderUpdateDate?: Date,
   status: string,
   totalAmount: string,
   buyer: IBuyer,
-  productsQuantity: string,
+  productsQuantity?: string,
   products: Array<IProduct>,
-  businessInvoice: Object,
+  businessInvoice?: Object,
   payment: IPayment,
   shipping: IShipping,
-  notes: string,
-  orderNumber: string
+  notes?: string,
+  orderNumber?: string
 }
 
 interface IBuyer {
@@ -23,7 +23,10 @@ interface IBuyer {
   name: string,
   lastName: string,
   email: string,
-  phone: string
+  phone?: string,
+  documentNumber?: string,
+  documentType?: string,
+  address?: Object
 }
 
 export interface IProduct {
@@ -32,7 +35,11 @@ export interface IProduct {
   sku: string,
   quantity: number,
   unitPrice: number,
-  totalPrice: number
+  totalPrice: number,
+  productShopSku?: string,
+  shippingFrom?: Object,
+  shippingPrice?: number,
+  commission?: number
 }
 
 interface IPayment {
@@ -43,6 +50,12 @@ interface IPayment {
 }
 
 interface IShipping {
+  tracking?: string,
+  method?: string,
   address: string,
-  status: string
+  status: string,
+  trackingNumber?: string,
+  shippingCompany?: string,
+  shippingCost: number,
+  url?: string
 }

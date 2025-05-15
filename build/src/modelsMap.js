@@ -38,4 +38,5 @@ const model = __importStar(require("./models"));
 exports.modelCreatorsMap = {
     OrderMarketplace: model.createOrderMarketplaceModel,
     Message: model.createMessageModel,
+    Products: model.createProductsModel,
 };

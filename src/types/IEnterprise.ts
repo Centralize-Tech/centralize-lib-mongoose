@@ -1,6 +1,7 @@
 import { Document } from 'mongoose';
 
 export interface IEnterprise extends Document {
+  _id: string;
   name: string;
   status: boolean;
   description: string;

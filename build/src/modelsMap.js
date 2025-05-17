@@ -39,4 +39,5 @@ exports.modelCreatorsMap = {
     OrderMarketplace: model.createOrderMarketplaceModel,
     Message: model.createMessageModel,
     Products: model.createProductsModel,
+    Enterprise: model.createEnterpriseModel,
 };

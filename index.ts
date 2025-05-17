@@ -29,3 +29,4 @@ function createModelProxy(modelName: keyof typeof modelCreatorsMap) {
 export const OrderMarketplace = createModelProxy('OrderMarketplace');
 export const Message = createModelProxy('Message');
 export const Products = createModelProxy('Products');
+export const Enterprise = createModelProxy('Enterprise');

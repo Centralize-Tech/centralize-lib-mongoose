@@ -17,3 +17,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./IOrderMarketplace"), exports);
 __exportStar(require("./IMessage"), exports);
 __exportStar(require("./IProducts"), exports);
+__exportStar(require("./IEnterprise"), exports);

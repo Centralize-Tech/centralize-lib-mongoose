@@ -40,4 +40,5 @@ exports.modelCreatorsMap = {
     Message: model.createMessageModel,
     Products: model.createProductsModel,
     Enterprise: model.createEnterpriseModel,
+    Buyers: model.createBuyersModel,
 };

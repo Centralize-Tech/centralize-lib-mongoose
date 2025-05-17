@@ -30,4 +30,4 @@ export const OrderMarketplace = createModelProxy('OrderMarketplace');
 export const Message = createModelProxy('Message');
 export const Products = createModelProxy('Products');
 export const Enterprise = createModelProxy('Enterprise');
-export const Buyers = createModelProxy('Buyers');
+export const Buyer = createModelProxy('Buyer');

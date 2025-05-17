@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createBuyersModel = createBuyersModel;
+exports.createBuyerModel = createBuyerModel;
 const mongoose_1 = require("mongoose");
-const buyersSchema = new mongoose_1.Schema({
+const buyerSchema = new mongoose_1.Schema({
     enterpriseId: { type: String, required: true },
     address: {
         additional_info: { type: String, default: null },
@@ -17,6 +17,6 @@ const buyersSchema = new mongoose_1.Schema({
     name: { type: String, required: true },
     phone: { type: String, required: true }
 }, { timestamps: true });
-function createBuyersModel(conn) {
-    return conn.model('Buyers', buyersSchema);
+function createBuyerModel(conn) {
+    return conn.model('Buyer', buyerSchema);
 }

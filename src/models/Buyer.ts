@@ -1,8 +1,8 @@
 import { Connection, Schema } from 'mongoose';
 
-import { IBuyers } from '../types';
+import { IBuyer } from '../types';
 
-const buyersSchema = new Schema<IBuyers>({
+const buyerSchema = new Schema<IBuyer>({
   enterpriseId: { type: String, required: true },
   address: {
     additional_info: { type: String, default: null },
@@ -18,6 +18,6 @@ const buyersSchema = new Schema<IBuyers>({
   phone: { type: String, required: true }
 }, { timestamps: true });
 
-export function createBuyersModel(conn: Connection) {
-  return conn.model<IBuyers>('Buyers', buyersSchema);
+export function createBuyerModel(conn: Connection) {
+  return conn.model<IBuyer>('Buyer', buyerSchema);
 }

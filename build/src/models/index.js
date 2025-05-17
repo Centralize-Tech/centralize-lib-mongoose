@@ -18,4 +18,4 @@ __exportStar(require("./OrderMarketplace"), exports);
 __exportStar(require("./Message"), exports);
 __exportStar(require("./Products"), exports);
 __exportStar(require("./Enterprise"), exports);
-__exportStar(require("./Buyers"), exports);
+__exportStar(require("./Buyer"), exports);

@@ -18,4 +18,4 @@ __exportStar(require("./IOrderMarketplace"), exports);
 __exportStar(require("./IMessage"), exports);
 __exportStar(require("./IProducts"), exports);
 __exportStar(require("./IEnterprise"), exports);
-__exportStar(require("./IBuyers"), exports);
+__exportStar(require("./IBuyer"), exports);

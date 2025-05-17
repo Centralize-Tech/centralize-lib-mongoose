@@ -1,6 +1,6 @@
 import { Document } from 'mongoose';
 
-export interface IBuyers extends Document {
+export interface IBuyer extends Document {
   _id: string;
   enterpriseId: string;
   address: IAddress;

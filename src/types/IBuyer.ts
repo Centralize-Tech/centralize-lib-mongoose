@@ -1,7 +1,6 @@
 import { Document } from 'mongoose';
 
 export interface IBuyer extends Document {
-  _id: string;
   enterpriseId: string;
   address: IAddress;
   email: string;

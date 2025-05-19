@@ -19,3 +19,4 @@ __exportStar(require("./Message"), exports);
 __exportStar(require("./Products"), exports);
 __exportStar(require("./Enterprise"), exports);
 __exportStar(require("./Buyer"), exports);
+__exportStar(require("./Order"), exports);

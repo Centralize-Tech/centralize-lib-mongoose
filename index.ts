@@ -31,3 +31,4 @@ export const Message = createModelProxy('Message');
 export const Products = createModelProxy('Products');
 export const Enterprise = createModelProxy('Enterprise');
 export const Buyer = createModelProxy('Buyer');
+export const Order = createModelProxy('Order');

@@ -20,3 +20,4 @@ __exportStar(require("./IProducts"), exports);
 __exportStar(require("./IEnterprise"), exports);
 __exportStar(require("./IBuyer"), exports);
 __exportStar(require("./IOrder"), exports);
+__exportStar(require("./IProductCentralize"), exports);

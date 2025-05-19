@@ -20,3 +20,4 @@ __exportStar(require("./Products"), exports);
 __exportStar(require("./Enterprise"), exports);
 __exportStar(require("./Buyer"), exports);
 __exportStar(require("./Order"), exports);
+__exportStar(require("./ProductCentralize"), exports);

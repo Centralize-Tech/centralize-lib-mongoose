@@ -7,7 +7,8 @@ export interface IProducts extends Document {
   zise?: string;
   sku: string;
   title: string;
-  attachments: Array<string>;
+  attachments?: Array<string>;
+  attatchments?: Array<string>;
   height?: number;
   length?: number;
   weight?: number;

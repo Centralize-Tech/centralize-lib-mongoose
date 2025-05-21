@@ -41,6 +41,5 @@ exports.modelCreatorsMap = {
     Products: model.createProductsModel,
     Enterprise: model.createEnterpriseModel,
     Buyer: model.createBuyerModel,
-    Order: model.orderModel,
-    ProductCentralize: model.createProductCentralizeModel,
+    Order: model.orderModel
 };

@@ -10,7 +10,7 @@ export interface IOrderMarketplace extends Document {
   totalAmount: string,
   buyer: IBuyer,
   productsQuantity?: string,
-  products: Array<IProduct>,
+  products: Array<IProductMarketplace>,
   businessInvoice?: Object,
   payment: IPayment,
   shipping: IShipping,
@@ -29,7 +29,7 @@ interface IBuyer {
   address?: Object
 }
 
-export interface IProduct {
+export interface IProductMarketplace {
   id: string,
   name: string,
   sku: string,

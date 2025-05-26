@@ -4,6 +4,7 @@ import { IUsers } from '../types';
 
 const usersSchema = new Schema<IUsers>({
   accessToken: { type: String, required: true },
+  enterpriseId: { type: String, required: true },
   clientId: { type: String, required: true },
   email: { type: String, required: true },
   first_name: { type: String, required: true },

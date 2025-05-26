@@ -1,4 +1,4 @@
-import { Connection, Schema } from 'mongoose';
+import { Connection, Schema, Types } from 'mongoose';
 
 import { IOrder } from '../types';
 
@@ -12,6 +12,7 @@ const orderSchema = new Schema<IOrder>({
   payment: { type: Object, required: true },
   shipping: { type: Object, required: true },
   notes: { type: String },
+  users: { type: Types.ObjectId, ref: 'Users' },
 }, { timestamps: true });
 
 export function orderModel(conn: Connection) {

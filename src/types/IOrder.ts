@@ -15,6 +15,7 @@ export interface IOrder extends Document {
   payment: IPayment;
   shipping: IShipping;
   notes?: string;
+  users: IUsersOrder;
 }
 
 export interface IBuyerOrder {
@@ -48,3 +49,15 @@ export interface IShipping {
   status: string;
   deliveryInstructions?: string;
 };
+
+export interface IUsersOrder {
+  accessToken: string;
+  enterpriseId: string;
+  clientId: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  seller_id: string;
+  seller_name: string;
+  token: string;
+}

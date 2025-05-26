@@ -4,6 +4,7 @@ exports.usersModel = usersModel;
 const mongoose_1 = require("mongoose");
 const usersSchema = new mongoose_1.Schema({
     accessToken: { type: String, required: true },
+    enterpriseId: { type: String, required: true },
     clientId: { type: String, required: true },
     email: { type: String, required: true },
     first_name: { type: String, required: true },

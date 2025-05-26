@@ -7,7 +7,6 @@ const orderSchema = new Schema<IOrder>({
   marketplace: { type: String, required: true },
   orderId: { type: String, required: true, unique: true },
   status: { type: String, required: true },
-
   buyer: { type: Object, required: true },
   products: { type: [], required: true },
   payment: { type: Object, required: true },

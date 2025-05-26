@@ -3,7 +3,11 @@ import mongoose, { Connection } from 'mongoose';
 import config from './config';
 
 const DB_URLS: Record<string, string> = {
-  '1234': config.mongooseDB.DBHost
+  '1234': config.mongooseDB.DBHost,
+  'Paris:': config.mongooseDB.DBHostParis,
+  'Falabella:': config.mongooseDB.DBHostFalabella,
+  'Ripley:': config.mongooseDB.DBHostFalabella,
+  'Meli': config.mongooseDB.DBHostMeli
 };
 
 const CONNECTIONS_MAP: Map<string, Connection> = new Map();

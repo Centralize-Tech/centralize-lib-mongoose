@@ -18,6 +18,7 @@ export function getConnection(enterpriseId: string): Connection {
   }
 
   const uri = DB_URLS[enterpriseId] || DB_URLS['1234'];
+  console.log('uri', uri);
   const newConn = mongoose.createConnection(uri);
 
   CONNECTIONS_MAP.set(enterpriseId, newConn);

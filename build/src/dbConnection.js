@@ -19,6 +19,7 @@ function getConnection(enterpriseId) {
         return CONNECTIONS_MAP.get(enterpriseId);
     }
     const uri = DB_URLS[enterpriseId] || DB_URLS['1234'];
+    console.log('uri', uri);
     const newConn = mongoose_1.default.createConnection(uri);
     CONNECTIONS_MAP.set(enterpriseId, newConn);
     return newConn;

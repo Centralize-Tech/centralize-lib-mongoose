@@ -12,7 +12,7 @@ const orderSchema = new mongoose_1.Schema({
     payment: { type: Object, required: true },
     shipping: { type: Object, required: true },
     notes: { type: String },
-    users: { type: mongoose_1.Types.ObjectId, ref: 'Users' },
+    users: { type: mongoose_1.Types.ObjectId, ref: 'users' },
 }, { timestamps: true });
 function orderModel(conn) {
     return conn.model('orders', orderSchema);

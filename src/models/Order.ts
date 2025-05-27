@@ -12,7 +12,7 @@ const orderSchema = new Schema<IOrder>({
   payment: { type: Object, required: true },
   shipping: { type: Object, required: true },
   notes: { type: String },
-  users: { type: Types.ObjectId, ref: 'Users' },
+  users: { type: Types.ObjectId, ref: 'users' },
 }, { timestamps: true });
 
 export function orderModel(conn: Connection) {

@@ -16,5 +16,5 @@ const orderSchema = new Schema<IOrder>({
 }, { timestamps: true });
 
 export function orderModel(conn: Connection) {
-  return conn.model<IOrder>('Order', orderSchema);
+  return conn.model<IOrder>('orders', orderSchema);
 }

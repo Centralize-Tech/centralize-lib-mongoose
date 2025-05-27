@@ -5,3 +5,4 @@ export * from './Enterprise';
 export * from './Buyer';
 export * from './Order';
 export * from './Users';
+export * from './OrderParis';

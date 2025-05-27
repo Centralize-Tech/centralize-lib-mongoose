@@ -18,7 +18,6 @@ function createModelProxy(modelName: keyof typeof modelCreatorsMap) {
       const model = modelCreatorsMap[modelName](conn);
       return Reflect.get(model, propKey, receiver);
     },
-    
     construct(target: any, args: any) {
       const conn = getConnection(marketplace);
       const model = modelCreatorsMap[modelName](conn);
@@ -34,3 +33,4 @@ export const Enterprise = createModelProxy('Enterprise');
 export const Buyer = createModelProxy('Buyer');
 export const Order = createModelProxy('Order');
 export const Users = createModelProxy('Users');
+export const OrderParis = createModelProxy('OrderParis');

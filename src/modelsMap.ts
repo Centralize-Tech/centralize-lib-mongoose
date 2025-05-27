@@ -7,5 +7,6 @@ export const modelCreatorsMap = {
   Enterprise: model.createEnterpriseModel,
   Buyer: model.createBuyerModel,
   Order: model.orderModel,
-  Users: model.usersModel
+  Users: model.usersModel,
+  OrderParis: model.createOrderParisModel
 };

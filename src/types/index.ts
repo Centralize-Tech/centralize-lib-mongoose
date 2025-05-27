@@ -5,3 +5,4 @@ export * from './IEnterprise';
 export * from './IBuyer';
 export * from './IOrder';
 export * from './IUsers';
+export * from './IOrderParis';

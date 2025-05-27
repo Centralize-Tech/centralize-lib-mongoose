@@ -15,5 +15,5 @@ const orderSchema = new mongoose_1.Schema({
     users: { type: mongoose_1.Types.ObjectId, ref: 'Users' },
 }, { timestamps: true });
 function orderModel(conn) {
-    return conn.model('Order', orderSchema);
+    return conn.model('orders', orderSchema);
 }

@@ -17,7 +17,12 @@ export function getConnection(marketplace: string): Connection {
     return CONNECTIONS_MAP.get(marketplace)!;
   }
 
+  console.log('DB_URLS', DB_URLS);
+  console.log('enterpriseId', marketplace);
+  console.log('DB_URLS[enterpriseId]', DB_URLS[marketplace]);
+  console.log('config.mongooseDB.DBHostParis', config.mongooseDB.DBHostParis);
   const uri = DB_URLS[marketplace] || DB_URLS['1234'];
+  console.log('uri', uri);
   const newConn = mongoose.createConnection(uri);
 
   CONNECTIONS_MAP.set(marketplace, newConn);

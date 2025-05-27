@@ -14,16 +14,16 @@ const DB_URLS = {
     'Meli': config_1.default.mongooseDB.DBHostMeli
 };
 const CONNECTIONS_MAP = new Map();
-function getConnection(enterpriseId) {
-    if (CONNECTIONS_MAP.has(enterpriseId)) {
-        return CONNECTIONS_MAP.get(enterpriseId);
+function getConnection(marketplace) {
+    if (CONNECTIONS_MAP.has(marketplace)) {
+        return CONNECTIONS_MAP.get(marketplace);
     }
     console.log('DB_URLS', DB_URLS);
-    console.log('enterpriseId', enterpriseId);
-    console.log('DB_URLS[enterpriseId]', DB_URLS[enterpriseId]);
-    const uri = DB_URLS[enterpriseId] || DB_URLS['1234'];
+    console.log('enterpriseId', marketplace);
+    console.log('DB_URLS[enterpriseId]', DB_URLS[marketplace]);
+    const uri = DB_URLS[marketplace] || DB_URLS['1234'];
     console.log('uri', uri);
     const newConn = mongoose_1.default.createConnection(uri);
-    CONNECTIONS_MAP.set(enterpriseId, newConn);
+    CONNECTIONS_MAP.set(marketplace, newConn);
     return newConn;
 }

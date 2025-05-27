@@ -15,24 +15,24 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Users = exports.Order = exports.Buyer = exports.Enterprise = exports.Products = exports.Message = exports.OrderMarketplace = void 0;
-exports.setEnterpriseId = setEnterpriseId;
+exports.setMarketplace = setMarketplace;
 const dbConnection_1 = require("./src/dbConnection");
 const modelsMap_1 = require("./src/modelsMap");
 __exportStar(require("./src/types"), exports);
-let currentEnterpriseId = '1234';
-function setEnterpriseId(eId) {
-    currentEnterpriseId = eId;
+let marketplace = '1234';
+function setMarketplace(mId) {
+    marketplace = mId;
 }
 function createModelProxy(modelName) {
     function ModelProxy() { }
     return new Proxy(ModelProxy, {
         get(target, propKey, receiver) {
-            const conn = (0, dbConnection_1.getConnection)(currentEnterpriseId);
+            const conn = (0, dbConnection_1.getConnection)(marketplace);
             const model = modelsMap_1.modelCreatorsMap[modelName](conn);
             return Reflect.get(model, propKey, receiver);
         },
         construct(target, args) {
-            const conn = (0, dbConnection_1.getConnection)(currentEnterpriseId);
+            const conn = (0, dbConnection_1.getConnection)(marketplace);
             const model = modelsMap_1.modelCreatorsMap[modelName](conn);
             return new model(...args);
         },

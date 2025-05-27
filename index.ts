@@ -3,10 +3,10 @@ import { modelCreatorsMap } from './src/modelsMap';
 
 export * from './src/types';
 
-let currentEnterpriseId = '1234';
+let marketplace = '1234';
 
-export function setEnterpriseId(eId: string) {
-  currentEnterpriseId = eId;
+export function setMarketplace(mId: string) {
+  marketplace = mId;
 }
 
 function createModelProxy(modelName: keyof typeof modelCreatorsMap) {
@@ -14,12 +14,13 @@ function createModelProxy(modelName: keyof typeof modelCreatorsMap) {
 
   return new Proxy(ModelProxy, {
     get(target: any, propKey: any, receiver: any) {
-      const conn = getConnection(currentEnterpriseId);
+      const conn = getConnection(marketplace);
       const model = modelCreatorsMap[modelName](conn);
       return Reflect.get(model, propKey, receiver);
     },
+    
     construct(target: any, args: any) {
-      const conn = getConnection(currentEnterpriseId);
+      const conn = getConnection(marketplace);
       const model = modelCreatorsMap[modelName](conn);
       return new (model as any)(...args);
     },

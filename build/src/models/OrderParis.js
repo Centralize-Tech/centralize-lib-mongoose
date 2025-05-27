@@ -16,6 +16,7 @@ exports.orderParisSchema = new mongoose_1.Schema({
     originOrderNumber: { type: String, required: true },
     subOrderNumber: { type: String, required: true },
     subOrders: [{ type: Object, required: true }],
+    users: { type: mongoose_1.Types.ObjectId, ref: 'users' },
 }, { timestamps: true });
 function createOrderParisModel(conn) {
     return conn.model('Orders', exports.orderParisSchema);

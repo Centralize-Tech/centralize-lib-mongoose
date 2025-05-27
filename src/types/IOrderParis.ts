@@ -12,7 +12,8 @@ export interface IOrderParis extends Document {
   originOrderDate: string;
   originOrderNumber: string;
   subOrderNumber: string;
-  subOrders: Array<any>;
+  subOrders: Array<ISubOrderParis>;
+  users: IUsersOrderParis;
 }
 
 export interface IBillingAddressParis {
@@ -162,4 +163,16 @@ export interface ITrackingParis {
 export interface ILabelParis {
   format: string;
   url: string;
+}
+
+export interface IUsersOrderParis {
+  accessToken: string;
+  enterpriseId: string;
+  clientId: string;
+  email: string;
+  first_name: string;
+  last_name: string;
+  seller_id: string;
+  seller_name: string;
+  token: string;
 }

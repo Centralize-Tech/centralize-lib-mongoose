@@ -1,4 +1,4 @@
-import { Schema, Connection } from 'mongoose';
+import { Schema, Connection, Types } from 'mongoose';
 
 import { IOrderParis } from '../types';
 
@@ -15,6 +15,7 @@ export const orderParisSchema = new Schema<IOrderParis>({
   originOrderNumber: { type: String, required: true },
   subOrderNumber: { type: String, required: true },
   subOrders: [{ type: Object, required: true }],
+  users: { type: Types.ObjectId, ref: 'users' },
 }, { timestamps: true });
 
 export function createOrderParisModel(conn: Connection) {

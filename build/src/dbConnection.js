@@ -18,6 +18,9 @@ function getConnection(enterpriseId) {
     if (CONNECTIONS_MAP.has(enterpriseId)) {
         return CONNECTIONS_MAP.get(enterpriseId);
     }
+    console.log('DB_URLS', DB_URLS);
+    console.log('enterpriseId', enterpriseId);
+    console.log('DB_URLS[enterpriseId]', DB_URLS[enterpriseId]);
     const uri = DB_URLS[enterpriseId] || DB_URLS['1234'];
     console.log('uri', uri);
     const newConn = mongoose_1.default.createConnection(uri);

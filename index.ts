@@ -34,3 +34,4 @@ export const Buyer = createModelProxy('Buyer');
 export const Order = createModelProxy('Order');
 export const Users = createModelProxy('Users');
 export const OrderParis = createModelProxy('OrderParis');
+export const ProductParis = createModelProxy('ProductParis');

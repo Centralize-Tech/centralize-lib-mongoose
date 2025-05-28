@@ -22,3 +22,4 @@ __exportStar(require("./Buyer"), exports);
 __exportStar(require("./Order"), exports);
 __exportStar(require("./Users"), exports);
 __exportStar(require("./OrderParis"), exports);
+__exportStar(require("./ProductParis"), exports);

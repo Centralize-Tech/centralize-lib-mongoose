@@ -43,5 +43,6 @@ exports.modelCreatorsMap = {
     Buyer: model.createBuyerModel,
     Order: model.orderModel,
     Users: model.usersModel,
-    OrderParis: model.createOrderParisModel
+    OrderParis: model.createOrderParisModel,
+    ProductParis: model.createProductParisModel,
 };

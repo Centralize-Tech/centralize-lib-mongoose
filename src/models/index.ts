@@ -6,3 +6,4 @@ export * from './Buyer';
 export * from './Order';
 export * from './Users';
 export * from './OrderParis';
+export * from './ProductParis';

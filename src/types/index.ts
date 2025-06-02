@@ -7,3 +7,4 @@ export * from './IOrder';
 export * from './IUsers';
 export * from './IOrderParis';
 export * from './IProductParis';
+export * from './IUserParis';

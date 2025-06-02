@@ -10,4 +10,5 @@ export const modelCreatorsMap = {
   Users: model.usersModel,
   OrderParis: model.createOrderParisModel,
   ProductParis: model.createProductParisModel,
+  UserParis: model.createUserParisModel,
 };

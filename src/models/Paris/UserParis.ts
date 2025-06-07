@@ -1,6 +1,6 @@
 import { Schema, Connection } from 'mongoose';
 
-import { IUserParis } from '../types';
+import { IUserParis } from '../../types/Paris/IUserParis';
 
 export const userParisSchema = new Schema<IUserParis>({
   accessToken: { type: String, required: true },

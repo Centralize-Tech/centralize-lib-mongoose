@@ -1,6 +1,6 @@
 import { Schema, Connection, Types } from 'mongoose';
 
-import { IOrderParis } from '../types';
+import { IOrderParis } from '../../types/Paris/IOrderParis';
 
 export const orderParisSchema = new Schema<IOrderParis>({
   billingAddress: { type: Object, required: true },

@@ -36,3 +36,4 @@ export const Users = createModelProxy('Users');
 export const OrderParis = createModelProxy('OrderParis');
 export const ProductParis = createModelProxy('ProductParis');
 export const UserParis = createModelProxy('UserParis');
+export const UserFalabella = createModelProxy('UserFalabella');

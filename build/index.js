@@ -14,7 +14,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserParis = exports.ProductParis = exports.OrderParis = exports.Users = exports.Order = exports.Buyer = exports.Enterprise = exports.Products = exports.Message = exports.OrderMarketplace = void 0;
+exports.UserFalabella = exports.UserParis = exports.ProductParis = exports.OrderParis = exports.Users = exports.Order = exports.Buyer = exports.Enterprise = exports.Products = exports.Message = exports.OrderMarketplace = void 0;
 exports.setMarketplace = setMarketplace;
 const dbConnection_1 = require("./src/dbConnection");
 const modelsMap_1 = require("./src/modelsMap");
@@ -48,3 +48,4 @@ exports.Users = createModelProxy('Users');
 exports.OrderParis = createModelProxy('OrderParis');
 exports.ProductParis = createModelProxy('ProductParis');
 exports.UserParis = createModelProxy('UserParis');
+exports.UserFalabella = createModelProxy('UserFalabella');

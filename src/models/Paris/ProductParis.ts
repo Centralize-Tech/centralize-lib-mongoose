@@ -1,6 +1,6 @@
 import { Schema, Connection, Types } from 'mongoose';
 
-import { IProductParis } from '../types';
+import { IProductParis } from '../../types/Paris/IProductParis';
 
 export const productParisSchema = new Schema<IProductParis>({
   id: { type: String, required: true },

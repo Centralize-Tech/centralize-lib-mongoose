@@ -25,3 +25,4 @@ __exportStar(require("./Paris/OrderParis"), exports);
 __exportStar(require("./Paris/ProductParis"), exports);
 __exportStar(require("./Paris/UserParis"), exports);
 __exportStar(require("./Falabella/UserFalabella"), exports);
+__exportStar(require("./Falabella/ProductFalabella"), exports);

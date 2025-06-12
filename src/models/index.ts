@@ -9,3 +9,4 @@ export * from './Paris/OrderParis';
 export * from './Paris/ProductParis';
 export * from './Paris/UserParis';
 export * from './Falabella/UserFalabella';
+export * from './Falabella/ProductFalabella';

@@ -47,4 +47,5 @@ exports.modelCreatorsMap = {
     ProductParis: model.createProductParisModel,
     UserParis: model.createUserParisModel,
     UserFalabella: model.createUserFalabellaModel,
+    ProductFalabella: model.createProductFalabellaModel,
 };

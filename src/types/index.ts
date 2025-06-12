@@ -9,3 +9,4 @@ export * from './Paris/IOrderParis';
 export * from './Paris/IProductParis';
 export * from './Paris/IUserParis';
 export * from './Falabella/IUserFalabella';
+export * from './Falabella/IProductFalabella';

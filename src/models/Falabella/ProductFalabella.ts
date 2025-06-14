@@ -5,6 +5,7 @@ import { IProductFalabella } from '../../types/Falabella/IProductFalabella';
 export const productFalabellaSchema = new Schema<IProductFalabella>({
   requestId: { type: String, required: true },
   enterpriseId: { type: String, required: true },
+  sku: { type: String, required: true },
   product: { type: Object, required: true },
 }, { timestamps: true });
 

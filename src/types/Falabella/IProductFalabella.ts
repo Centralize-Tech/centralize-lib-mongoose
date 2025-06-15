@@ -6,4 +6,5 @@ export interface IProductFalabella extends Document {
   sku: string;
   image: Object;
   product: Object;
+  status: boolean;
 }

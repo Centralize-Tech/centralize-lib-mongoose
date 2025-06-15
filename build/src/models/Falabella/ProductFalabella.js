@@ -9,6 +9,7 @@ exports.productFalabellaSchema = new mongoose_1.Schema({
     sku: { type: String, required: true },
     image: { type: mongoose_1.Schema.Types.Mixed, required: true },
     product: { type: mongoose_1.Schema.Types.Mixed, required: true },
+    status: { type: Boolean, required: true, default: true },
 }, { timestamps: true });
 function createProductFalabellaModel(conn) {
     return conn.model('Products', exports.productFalabellaSchema);

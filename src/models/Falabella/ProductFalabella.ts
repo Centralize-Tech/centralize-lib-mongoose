@@ -8,6 +8,7 @@ export const productFalabellaSchema = new Schema<IProductFalabella>({
   sku: { type: String, required: true },
   image: { type: Schema.Types.Mixed, required: true },
   product: { type: Schema.Types.Mixed, required: true },
+  status: { type: Boolean, required: true, default: true },
 }, { timestamps: true });
 
 export function createProductFalabellaModel(conn: Connection) {

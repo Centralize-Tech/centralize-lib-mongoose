@@ -3,7 +3,7 @@ import mongoose, { Connection } from 'mongoose';
 import config from './config';
 
 const DB_URLS: Record<string, string> = {
-  '1234': config.mongooseDB.DBHost,
+  'Centralize': config.mongooseDB.DBHostCentralize,
   'Paris': config.mongooseDB.DBHostParis,
   'Falabella': config.mongooseDB.DBHostFalabella,
   'Ripley': config.mongooseDB.DBHostFalabella,
@@ -17,7 +17,7 @@ export function getConnection(marketplace: string): Connection {
     return CONNECTIONS_MAP.get(marketplace)!;
   }
 
-  const uri = DB_URLS[marketplace] || DB_URLS['1234'];
+  const uri = DB_URLS[marketplace] || DB_URLS['Centralize'];
   const newConn = mongoose.createConnection(uri);
 
   CONNECTIONS_MAP.set(marketplace, newConn);

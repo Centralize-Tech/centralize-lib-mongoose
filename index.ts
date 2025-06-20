@@ -33,8 +33,16 @@ export const Enterprise = createModelProxy('Enterprise');
 export const Buyer = createModelProxy('Buyer');
 export const Order = createModelProxy('Order');
 export const Users = createModelProxy('Users');
+
+// Paris
 export const OrderParis = createModelProxy('OrderParis');
 export const ProductParis = createModelProxy('ProductParis');
 export const UserParis = createModelProxy('UserParis');
+
+// Falabella
 export const UserFalabella = createModelProxy('UserFalabella');
 export const ProductFalabella = createModelProxy('ProductFalabella');
+
+// Centralize
+export const EnterpriseCentralize = createModelProxy('EnterpriseCentralize');
+export const UserCentralize = createModelProxy('UserCentralize');

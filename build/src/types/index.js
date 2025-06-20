@@ -21,8 +21,13 @@ __exportStar(require("./IEnterprise"), exports);
 __exportStar(require("./IBuyer"), exports);
 __exportStar(require("./IOrder"), exports);
 __exportStar(require("./IUsers"), exports);
+// Paris
 __exportStar(require("./Paris/IOrderParis"), exports);
 __exportStar(require("./Paris/IProductParis"), exports);
 __exportStar(require("./Paris/IUserParis"), exports);
+// Falabella
 __exportStar(require("./Falabella/IUserFalabella"), exports);
 __exportStar(require("./Falabella/IProductFalabella"), exports);
+// Centralize
+__exportStar(require("./Centralize/IEnterpriseCentralize"), exports);
+__exportStar(require("./Centralize/IUserCentralize"), exports);

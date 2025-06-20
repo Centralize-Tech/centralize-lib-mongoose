@@ -8,9 +8,17 @@ export const modelCreatorsMap = {
   Buyer: model.createBuyerModel,
   Order: model.orderModel,
   Users: model.usersModel,
+
+  // Paris
   OrderParis: model.createOrderParisModel,
   ProductParis: model.createProductParisModel,
   UserParis: model.createUserParisModel,
+
+  // Falabella
   UserFalabella: model.createUserFalabellaModel,
   ProductFalabella: model.createProductFalabellaModel,
+
+  // Centralize
+  EnterpriseCentralize: model.createEnterpriseCentralizeModel,
+  UserCentralize: model.createUserCentralizeModel,
 };

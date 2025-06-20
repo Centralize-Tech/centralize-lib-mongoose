@@ -8,7 +8,7 @@ export const userCentralizeSchema = new Schema<IUserCentralize>({
   status: { type: Boolean, required: true, default: true },
   rut: { type: String, required: true },
   name: { type: String, required: true },
-  loginCode: { type: String, required: true },
+  loginCode: { type: String, required: true, unique: true },
 }, { timestamps: true });
 
 export function createUserCentralizeModel(conn: Connection) {

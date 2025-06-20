@@ -7,7 +7,7 @@ exports.getConnection = getConnection;
 const mongoose_1 = __importDefault(require("mongoose"));
 const config_1 = __importDefault(require("./config"));
 const DB_URLS = {
-    '1234': config_1.default.mongooseDB.DBHost,
+    'Centralize': config_1.default.mongooseDB.DBHostCentralize,
     'Paris': config_1.default.mongooseDB.DBHostParis,
     'Falabella': config_1.default.mongooseDB.DBHostFalabella,
     'Ripley': config_1.default.mongooseDB.DBHostFalabella,
@@ -18,7 +18,7 @@ function getConnection(marketplace) {
     if (CONNECTIONS_MAP.has(marketplace)) {
         return CONNECTIONS_MAP.get(marketplace);
     }
-    const uri = DB_URLS[marketplace] || DB_URLS['1234'];
+    const uri = DB_URLS[marketplace] || DB_URLS['Centralize'];
     const newConn = mongoose_1.default.createConnection(uri);
     CONNECTIONS_MAP.set(marketplace, newConn);
     return newConn;

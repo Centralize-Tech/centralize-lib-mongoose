@@ -9,7 +9,7 @@ exports.userCentralizeSchema = new mongoose_1.Schema({
     status: { type: Boolean, required: true, default: true },
     rut: { type: String, required: true },
     name: { type: String, required: true },
-    loginCode: { type: String, required: true },
+    loginCode: { type: String, required: true, unique: true },
 }, { timestamps: true });
 function createUserCentralizeModel(conn) {
     return conn.model('Users', exports.userCentralizeSchema);

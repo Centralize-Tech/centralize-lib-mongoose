@@ -1,13 +1,13 @@
 import { Document } from 'mongoose';
 
 export interface IEnterpriseCentralize extends Document {
-  name?: string;
+  name: string;
   lastName?: string;
   email: string;
-  phone: string;
+  phone?: string;
   rut: string;
   description?: string;
-  companyName?: string;
+  companyName: string;
   marketplace?: string;
   status: boolean;
 }

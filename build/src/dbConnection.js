@@ -31,8 +31,7 @@ const CONNECTION_OPTIONS = {
     connectTimeoutMS: 10000,
     maxPoolSize: 1,
     minPoolSize: 0,
-    bufferCommands: false,
-    bufferMaxEntries: 0
+    bufferCommands: false
 };
 function getConnection(marketplace) {
     if (CONNECTIONS_MAP.has(marketplace)) {

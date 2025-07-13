@@ -1,12 +1,9 @@
-import { getConnection, closeAllConnections, isConnectionReady, executeWithConnection } from './src/dbConnection';
+import { getConnection } from './src/dbConnection';
 import { modelCreatorsMap } from './src/modelsMap';
 
 export * from './src/types';
 
-// Exportar funciones de manejo de conexiones
-export { closeAllConnections, isConnectionReady, executeWithConnection };
-
-let marketplace = 'Centralize'; // Cambiar default a 'Centralize'
+let marketplace = 'Centralize';
 
 export function setMarketplace(mId: string) {
   marketplace = mId;
@@ -17,21 +14,11 @@ function createModelProxy(modelName: keyof typeof modelCreatorsMap) {
 
   return new Proxy(ModelProxy, {
     get(target: any, propKey: any, receiver: any) {
-      // Verificar si la conexión está lista antes de crear el modelo
-      if (!isConnectionReady(marketplace)) {
-        console.warn(`Conexión no está lista para marketplace: ${marketplace}`);
-      }
-      
       const conn = getConnection(marketplace);
       const model = modelCreatorsMap[modelName](conn);
       return Reflect.get(model, propKey, receiver);
     },
     construct(target: any, args: any) {
-      // Verificar si la conexión está lista antes de crear el modelo
-      if (!isConnectionReady(marketplace)) {
-        console.warn(`Conexión no está lista para marketplace: ${marketplace}`);
-      }
-      
       const conn = getConnection(marketplace);
       const model = modelCreatorsMap[modelName](conn);
       return new (model as any)(...args);

@@ -1,6 +1,4 @@
-import { closeAllConnections, isConnectionReady, executeWithConnection } from './src/dbConnection';
 export * from './src/types';
-export { closeAllConnections, isConnectionReady, executeWithConnection };
 export declare function setMarketplace(mId: string): void;
 export declare const OrderMarketplace: any;
 export declare const Message: any;

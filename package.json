@@ -1,7 +1,8 @@
 {
-  "name": "centralize-lib-mongoose",
+  "name": "@Centralize-lib/centralize-lib-mongoose",
   "version": "1.0.0",
   "main": "./build/index.js",
+  "types": "./build/index.d.ts",
   "scripts": {
     "build": "tsc",
     "start": "node build/index.js"

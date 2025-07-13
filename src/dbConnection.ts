@@ -14,9 +14,9 @@ const CONNECTIONS_MAP: Map<string, Connection> = new Map();
 
 // Configuración optimizada para AWS Lambda
 const CONNECTION_OPTIONS = {
-  serverSelectionTimeoutMS: 5000,
+  serverSelectionTimeoutMS: 10000,
   socketTimeoutMS: 45000,
-  connectTimeoutMS: 10000,
+  connectTimeoutMS: 20000,
   maxPoolSize: 1,
   minPoolSize: 0,
   bufferCommands: false
@@ -68,7 +68,7 @@ export async function getConnectionAsync(marketplace: string): Promise<Connectio
   return new Promise((resolve, reject) => {
     const timeout = setTimeout(() => {
       reject(new Error(`Connection timeout for marketplace: ${marketplace}`));
-    }, 10000);
+    }, 30000); // Aumentado a 30 segundos
 
     const checkConnection = () => {
       console.log(`Estado de conexión para ${marketplace}: ${connection.readyState}`);
@@ -76,8 +76,9 @@ export async function getConnectionAsync(marketplace: string): Promise<Connectio
       if (connection.readyState === 1) {
         clearTimeout(timeout);
         resolve(connection);
-      } else if (connection.readyState === 0) {
-        setTimeout(checkConnection, 100);
+      } else if (connection.readyState === 0 || connection.readyState === 2) {
+        // Estado 0 = disconnected, Estado 2 = connecting
+        setTimeout(checkConnection, 500); // Aumentado el intervalo
       } else {
         clearTimeout(timeout);
         reject(new Error(`Connection failed for marketplace: ${marketplace}. State: ${connection.readyState}`));

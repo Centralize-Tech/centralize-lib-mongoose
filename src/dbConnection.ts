@@ -38,3 +38,31 @@ export function getConnection(marketplace: string): Connection {
   CONNECTIONS_MAP.set(marketplace, newConn);
   return newConn;
 }
+
+export async function getConnectionAsync(marketplace: string): Promise<Connection> {
+  const connection = getConnection(marketplace);
+  
+  if (connection.readyState === 1) {
+    return connection;
+  }
+
+  return new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => {
+      reject(new Error(`Connection timeout for marketplace: ${marketplace}`));
+    }, 10000);
+
+    const checkConnection = () => {
+      if (connection.readyState === 1) {
+        clearTimeout(timeout);
+        resolve(connection);
+      } else if (connection.readyState === 0) {
+        setTimeout(checkConnection, 100);
+      } else {
+        clearTimeout(timeout);
+        reject(new Error(`Connection failed for marketplace: ${marketplace}`));
+      }
+    };
+
+    checkConnection();
+  });
+}

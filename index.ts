@@ -1,4 +1,4 @@
-import { getConnection } from './src/dbConnection';
+import { getConnection, getConnectionAsync } from './src/dbConnection';
 import { modelCreatorsMap } from './src/modelsMap';
 
 export * from './src/types';
@@ -14,14 +14,19 @@ function createModelProxy(modelName: keyof typeof modelCreatorsMap) {
 
   return new Proxy(ModelProxy, {
     get(target: any, propKey: any, receiver: any) {
-      const conn = getConnection(marketplace);
-      const model = modelCreatorsMap[modelName](conn);
-      return Reflect.get(model, propKey, receiver);
+      return async function(...args: any[]) {
+        const conn = await getConnectionAsync(marketplace);
+        const model = modelCreatorsMap[modelName](conn);
+        const method = Reflect.get(model, propKey, receiver);
+        return method.apply(model, args);
+      };
     },
     construct(target: any, args: any) {
-      const conn = getConnection(marketplace);
-      const model = modelCreatorsMap[modelName](conn);
-      return new (model as any)(...args);
+      return (async () => {
+        const conn = await getConnectionAsync(marketplace);
+        const model = modelCreatorsMap[modelName](conn);
+        return new (model as any)(...args);
+      })();
     },
   });
 }

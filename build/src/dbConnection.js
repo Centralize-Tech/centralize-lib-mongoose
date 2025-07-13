@@ -42,7 +42,21 @@ function getConnection(marketplace) {
         CONNECTIONS_MAP.delete(marketplace);
     }
     const uri = DB_URLS[marketplace] || DB_URLS['Centralize'];
+    if (!uri) {
+        throw new Error(`No se encontró URI de conexión para el marketplace: ${marketplace}`);
+    }
+    console.log(`Creando conexión para marketplace: ${marketplace}`);
     const newConn = mongoose_1.default.createConnection(uri, CONNECTION_OPTIONS);
+    // Agregar listeners de eventos para debug
+    newConn.on('connected', () => {
+        console.log(`Conexión establecida para marketplace: ${marketplace}`);
+    });
+    newConn.on('error', (error) => {
+        console.error(`Error en conexión para marketplace ${marketplace}:`, error);
+    });
+    newConn.on('disconnected', () => {
+        console.log(`Conexión desconectada para marketplace: ${marketplace}`);
+    });
     CONNECTIONS_MAP.set(marketplace, newConn);
     return newConn;
 }
@@ -57,6 +71,7 @@ function getConnectionAsync(marketplace) {
                 reject(new Error(`Connection timeout for marketplace: ${marketplace}`));
             }, 10000);
             const checkConnection = () => {
+                console.log(`Estado de conexión para ${marketplace}: ${connection.readyState}`);
                 if (connection.readyState === 1) {
                     clearTimeout(timeout);
                     resolve(connection);
@@ -66,7 +81,7 @@ function getConnectionAsync(marketplace) {
                 }
                 else {
                     clearTimeout(timeout);
-                    reject(new Error(`Connection failed for marketplace: ${marketplace}`));
+                    reject(new Error(`Connection failed for marketplace: ${marketplace}. State: ${connection.readyState}`));
                 }
             };
             checkConnection();

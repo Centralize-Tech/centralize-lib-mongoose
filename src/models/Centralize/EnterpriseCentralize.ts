@@ -10,7 +10,11 @@ export const enterpriseCentralizeSchema = new Schema<IEnterpriseCentralize>({
   rut: { type: String, required: true },
   description: { type: String, required: false },
   companyName: { type: String, required: true, unique: true },
-  marketplace: { type: String, required: false },
+  marketplace: [{ 
+    name: { type: String, required: true },
+    apikey: { type: String, required: true },
+    status: { type: Boolean, required: true, default: true }
+  }],
   status: { type: Boolean, required: true, default: true },
 }, { timestamps: true });
 

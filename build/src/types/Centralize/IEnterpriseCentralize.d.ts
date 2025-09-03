@@ -7,6 +7,12 @@ export interface IEnterpriseCentralize extends Document {
     rut: string;
     description?: string;
     companyName: string;
-    marketplace?: string;
+    marketplace?: IMarketplace[];
     status: boolean;
 }
+interface IMarketplace {
+    name: string;
+    apiKey: string;
+    status: boolean;
+}
+export {};

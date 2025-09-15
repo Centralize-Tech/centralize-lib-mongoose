@@ -28,60 +28,69 @@ DB_HOST_PARIS=mongodb://host:puerto/database
 DB_HOST_FALABELLA=mongodb://host:puerto/database
 DB_HOST_RIPLEY=mongodb://host:puerto/database
 DB_HOST_MELI=mongodb://host:puerto/database
+DB_HOST_SHOPIFY=mongodb://host:puerto/database
 ```
 
 ## Uso Básico
 
 ```typescript
-import { UserCentralize, setMarketplace } from '@Centralize-lib/centralize-lib-mongoose';
+import { UserCentralize, setMarketplace } from '@Centralize-lib/centralize-lib-mongoose'
 
 // Configurar marketplace
-setMarketplace('Centralize');
+setMarketplace('Centralize')
 
 // Usar el modelo
-const user = await UserCentralize.findOne({ loginCode: '12345', status: true });
+const user = await UserCentralize.findOne({ loginCode: '12345', status: true })
 ```
 
 ## Uso Avanzado con Manejo de Errores
 
 ```typescript
-import { 
-  executeWithConnection, 
+import {
+  executeWithConnection,
   closeAllConnections,
-  isConnectionReady 
-} from '@Centralize-lib/centralize-lib-mongoose';
+  isConnectionReady
+} from '@Centralize-lib/centralize-lib-mongoose'
 
 // Verificar estado de conexión
 if (!isConnectionReady('Centralize')) {
-  console.log('Conexión no está lista');
+  console.log('Conexión no está lista')
 }
 
 // Ejecutar operación con manejo de errores
 const user = await executeWithConnection('Centralize', async (connection) => {
-  const UserCentralizeModel = createUserCentralizeModel(connection);
-  return UserCentralizeModel.findOne({ loginCode: code, status: true });
-});
+  const UserCentralizeModel = createUserCentralizeModel(connection)
+  return UserCentralizeModel.findOne({ loginCode: code, status: true })
+})
 
 // Cerrar conexiones al finalizar
-await closeAllConnections();
+await closeAllConnections()
 ```
 
 ## Modelos Disponibles
 
 ### Centralize
+
 - `UserCentralize`
 - `EnterpriseCentralize`
 
 ### Paris
+
 - `UserParis`
 - `ProductParis`
 - `OrderParis`
 
 ### Falabella
+
 - `UserFalabella`
 - `ProductFalabella`
 
+### Shopify
+
+- `ProductShopify`
+
 ### Generales
+
 - `Users`
 - `Products`
 - `Order`
@@ -98,7 +107,7 @@ Para uso en AWS Lambda, consulta la [Guía Completa](AWS_LAMBDA_GUIDE.md).
 
 - **Timeout**: 30 segundos
 - **Memoria**: 512 MB o más
-- **Variables de entorno**: Configurar todas las DB_HOST_*
+- **Variables de entorno**: Configurar todas las DB*HOST*\*
 
 ## Solución de Problemas
 
@@ -114,10 +123,10 @@ Si encuentras el error `MongooseError: Operation buffering timed out after 10000
 ### Verificación de Conexión
 
 ```typescript
-import { isConnectionReady } from '@Centralize-lib/centralize-lib-mongoose';
+import { isConnectionReady } from '@Centralize-lib/centralize-lib-mongoose'
 
 if (!isConnectionReady('Centralize')) {
-  throw new Error('Conexión a la base de datos no está lista');
+  throw new Error('Conexión a la base de datos no está lista')
 }
 ```
 

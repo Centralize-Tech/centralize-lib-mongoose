@@ -1,4 +1,4 @@
-import * as model from './models';
+import * as model from './models'
 
 export const modelCreatorsMap = {
   OrderMarketplace: model.createOrderMarketplaceModel,
@@ -21,4 +21,7 @@ export const modelCreatorsMap = {
   // Centralize
   EnterpriseCentralize: model.createEnterpriseCentralizeModel,
   UserCentralize: model.createUserCentralizeModel,
-};
+
+  // Shopify
+  ProductShopify: model.createProductShopifyModel
+}

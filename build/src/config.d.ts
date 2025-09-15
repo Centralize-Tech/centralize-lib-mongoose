@@ -5,6 +5,7 @@ declare const _default: {
         DBHostFalabella: string;
         DBHostRipley: string;
         DBHostMeli: string;
+        DBHostShopify: string;
     };
 };
 export default _default;

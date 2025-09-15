@@ -7,11 +7,12 @@ exports.getConnection = getConnection;
 const mongoose_1 = __importDefault(require("mongoose"));
 const config_1 = __importDefault(require("./config"));
 const DB_URLS = {
-    'Centralize': config_1.default.mongooseDB.DBHostCentralize,
-    'Paris': config_1.default.mongooseDB.DBHostParis,
-    'Falabella': config_1.default.mongooseDB.DBHostFalabella,
-    'Ripley': config_1.default.mongooseDB.DBHostFalabella,
-    'Meli': config_1.default.mongooseDB.DBHostMeli
+    Centralize: config_1.default.mongooseDB.DBHostCentralize,
+    Paris: config_1.default.mongooseDB.DBHostParis,
+    Falabella: config_1.default.mongooseDB.DBHostFalabella,
+    Ripley: config_1.default.mongooseDB.DBHostFalabella,
+    Meli: config_1.default.mongooseDB.DBHostMeli,
+    Shopify: config_1.default.mongooseDB.DBHostShopify
 };
 const CONNECTIONS_MAP = new Map();
 function getConnection(marketplace) {

@@ -7,5 +7,6 @@ exports.default = {
         DBHostFalabella: process.env.DB_HOST_FALABELLA || '',
         DBHostRipley: process.env.DB_HOST_RIPLEY || '',
         DBHostMeli: process.env.DB_HOST_MELI || '',
+        DBHostShopify: process.env.DB_HOST_SHOPIFY || ''
     }
 };

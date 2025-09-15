@@ -53,4 +53,6 @@ exports.modelCreatorsMap = {
     // Centralize
     EnterpriseCentralize: model.createEnterpriseCentralizeModel,
     UserCentralize: model.createUserCentralizeModel,
+    // Shopify
+    ProductShopify: model.createProductShopifyModel
 };

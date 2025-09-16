@@ -5,7 +5,8 @@ export const shopShopifySchema = new Schema<IShopType>(
   {
     id: { type: String, required: true },
     shop: { type: String, required: true },
-    token: { type: String, required: true }
+    token: { type: String, required: true },
+    scopes: { type: String, required: true }
   },
   {
     timestamps: true

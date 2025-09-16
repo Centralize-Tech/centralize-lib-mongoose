@@ -4,4 +4,5 @@ export interface IShopType extends Document {
   id: string
   shop: string
   token: string
+  scopes: string
 }

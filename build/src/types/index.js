@@ -32,4 +32,5 @@ __exportStar(require("./Falabella/IProductFalabella"), exports);
 __exportStar(require("./Centralize/IEnterpriseCentralize"), exports);
 __exportStar(require("./Centralize/IUserCentralize"), exports);
 // Shopify
-__exportStar(require("./Shopify/ProductShopify"), exports);
+__exportStar(require("./Shopify/IShopShopity"), exports);
+__exportStar(require("./Shopify/IProductShopify"), exports);

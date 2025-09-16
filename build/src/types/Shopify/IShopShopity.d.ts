@@ -1,0 +1,6 @@
+import { Document } from 'mongoose';
+export interface IShopType extends Document {
+    id: string;
+    shop: string;
+    token: string;
+}

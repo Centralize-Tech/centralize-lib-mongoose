@@ -23,5 +23,6 @@ export const modelCreatorsMap = {
   UserCentralize: model.createUserCentralizeModel,
 
   // Shopify
+  ShopShopify: model.createShopShopifyModel,
   ProductShopify: model.createProductShopifyModel
 }

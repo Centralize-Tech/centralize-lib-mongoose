@@ -14,5 +14,6 @@ export declare const modelCreatorsMap: {
     ProductFalabella: typeof model.createProductFalabellaModel;
     EnterpriseCentralize: typeof model.createEnterpriseCentralizeModel;
     UserCentralize: typeof model.createUserCentralizeModel;
+    ShopShopify: typeof model.createShopShopifyModel;
     ProductShopify: typeof model.createProductShopifyModel;
 };

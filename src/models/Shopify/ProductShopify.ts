@@ -11,6 +11,7 @@ export const productShopifySchema = new Schema<IProductType>(
     vendor: { type: String, required: true },
     productType: { type: String, required: true },
     tags: { type: String, required: true },
+    totalInventory: { type: Number, required: true },
     createdAt: { type: Date, required: true },
     updatedAt: { type: Date, required: true },
     images: [{ type: Object, required: true }],

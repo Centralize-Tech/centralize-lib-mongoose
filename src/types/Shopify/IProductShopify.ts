@@ -9,6 +9,7 @@ export interface IProductType extends Document {
   vendor: string
   productType: string
   tags: string
+  totalInventory: number
   createdAt: Date
   updatedAt: Date
   images: IImageProduct[]

@@ -1,5 +1,6 @@
 export interface IOrderShopify {
   id: number
+  shop: string
   checkout_id: number
   checkout_token: string
   created_at: Date

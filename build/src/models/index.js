@@ -33,4 +33,5 @@ __exportStar(require("./Centralize/EnterpriseCentralize"), exports);
 __exportStar(require("./Centralize/UserCentralize"), exports);
 // Shopify
 __exportStar(require("./Shopify/ShopShopify"), exports);
+__exportStar(require("./Shopify/OrderShopify"), exports);
 __exportStar(require("./Shopify/ProductShopify"), exports);

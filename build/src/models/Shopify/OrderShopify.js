@@ -1,0 +1,41 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.orderShopifySchema = void 0;
+exports.createOrderShopifyModel = createOrderShopifyModel;
+const mongoose_1 = require("mongoose");
+exports.orderShopifySchema = new mongoose_1.Schema({
+    id: { type: Number, required: true },
+    checkout_id: { type: Number, required: true },
+    checkout_token: { type: String, required: true },
+    created_at: { type: Date, required: true },
+    updated_at: { type: Date, required: true },
+    closed_at: { type: Date },
+    cancelled_at: { type: Date },
+    confirmation_number: { type: String, required: true },
+    confirmed: { type: Boolean, required: true },
+    currency: { type: String, required: true },
+    order_number: { type: Number, required: true },
+    processed_at: { type: Date, required: true },
+    contact_email: { type: String, required: true },
+    tax_exempt: { type: Boolean, required: true },
+    total_tax: { type: String, required: true },
+    subtotal_price: { type: String, required: true },
+    billing_address: { type: Object, required: true },
+    token: { type: String, required: true },
+    company: { type: Object },
+    discount_codes: [{ type: Object, required: true }],
+    discount_applications: [{ type: Object, required: true }],
+    financial_status: { type: String, required: true },
+    phone: { type: String, required: true },
+    total_weight: { type: Number, required: true },
+    customer: { type: Object, required: true },
+    shipping_address: { type: Object },
+    payment_terms: { type: Object },
+    total_outstanding: { type: String, required: true },
+    total_price: { type: String, required: true },
+    tracking: [{ type: Object }],
+    refunds: [{ type: Object }]
+});
+function createOrderShopifyModel(conn) {
+    return conn.model('Order', exports.orderShopifySchema);
+}

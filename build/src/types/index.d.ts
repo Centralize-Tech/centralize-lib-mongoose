@@ -14,3 +14,4 @@ export * from './Centralize/IEnterpriseCentralize';
 export * from './Centralize/IUserCentralize';
 export * from './Shopify/IShopShopity';
 export * from './Shopify/IProductShopify';
+export * from './Shopify/IOrderShopify';

@@ -21,4 +21,5 @@ export * from './Centralize/UserCentralize'
 
 // Shopify
 export * from './Shopify/ShopShopify'
+export * from './Shopify/OrderShopify'
 export * from './Shopify/ProductShopify'

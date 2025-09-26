@@ -13,4 +13,5 @@ export * from './Falabella/ProductFalabella';
 export * from './Centralize/EnterpriseCentralize';
 export * from './Centralize/UserCentralize';
 export * from './Shopify/ShopShopify';
+export * from './Shopify/OrderShopify';
 export * from './Shopify/ProductShopify';

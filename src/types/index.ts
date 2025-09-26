@@ -22,3 +22,4 @@ export * from './Centralize/IUserCentralize'
 // Shopify
 export * from './Shopify/IShopShopity'
 export * from './Shopify/IProductShopify'
+export * from './Shopify/IOrderShopify'

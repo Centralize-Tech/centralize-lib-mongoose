@@ -13,6 +13,7 @@ export declare const UserParis: any;
 export declare const UserFalabella: any;
 export declare const ProductFalabella: any;
 export declare const ShopShopify: any;
+export declare const OrderShopify: any;
 export declare const ProductShopify: any;
 export declare const EnterpriseCentralize: any;
 export declare const UserCentralize: any;

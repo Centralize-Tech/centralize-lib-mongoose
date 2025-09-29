@@ -45,6 +45,7 @@ export const ProductFalabella = createModelProxy('ProductFalabella')
 
 // Shopify
 export const ShopShopify = createModelProxy('ShopShopify')
+export const OrderShopify = createModelProxy('OrderShopify')
 export const ProductShopify = createModelProxy('ProductShopify')
 
 // Centralize

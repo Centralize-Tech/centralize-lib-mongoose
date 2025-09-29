@@ -1,4 +1,6 @@
-export interface IOrderShopify {
+import { Document } from 'mongoose'
+
+export interface IOrderShopify extends Document {
   id: number
   shop: string
   checkout_id: number

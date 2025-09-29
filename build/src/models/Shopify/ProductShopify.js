@@ -5,6 +5,7 @@ exports.createProductShopifyModel = createProductShopifyModel;
 const mongoose_1 = require("mongoose");
 exports.productShopifySchema = new mongoose_1.Schema({
     id: { type: Number, required: true },
+    description: { type: String, required: true },
     created_at: { type: Date, required: true },
     handle: { type: String, required: true },
     product_type: { type: String, required: true },

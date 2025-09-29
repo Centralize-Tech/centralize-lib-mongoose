@@ -5,6 +5,7 @@ exports.createOrderShopifyModel = createOrderShopifyModel;
 const mongoose_1 = require("mongoose");
 exports.orderShopifySchema = new mongoose_1.Schema({
     id: { type: Number, required: true },
+    shop: { type: String, required: true },
     checkout_id: { type: Number, required: true },
     checkout_token: { type: String, required: true },
     created_at: { type: Date, required: true },
@@ -35,7 +36,7 @@ exports.orderShopifySchema = new mongoose_1.Schema({
     total_price: { type: String, required: true },
     tracking: [{ type: Object }],
     refunds: [{ type: Object }]
-});
+}, { timestamps: true });
 function createOrderShopifyModel(conn) {
     return conn.model('Order', exports.orderShopifySchema);
 }

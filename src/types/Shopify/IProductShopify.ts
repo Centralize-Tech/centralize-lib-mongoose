@@ -2,6 +2,7 @@ import { Document } from 'mongoose'
 
 export interface IProductType extends Document {
   id: number
+  shop: string
   description: string
   created_at: Date
   handle: string

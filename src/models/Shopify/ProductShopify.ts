@@ -4,6 +4,7 @@ import { IProductType } from '../../types'
 export const productShopifySchema = new Schema<IProductType>(
   {
     id: { type: Number, required: true },
+    shop: { type: String, required: true },
     description: { type: String, required: true },
     created_at: { type: Date, required: true },
     handle: { type: String, required: true },

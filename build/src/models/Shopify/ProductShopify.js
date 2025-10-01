@@ -10,7 +10,7 @@ exports.productShopifySchema = new mongoose_1.Schema({
     created_at: { type: Date, required: true },
     handle: { type: String, required: true },
     product_type: { type: String, required: true },
-    published_at: { type: Date, required: true },
+    published_at: { type: Date },
     title: { type: String, required: true },
     updated_at: { type: Date, required: true },
     vendor: { type: String, required: true },

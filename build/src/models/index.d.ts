@@ -15,3 +15,6 @@ export * from './Centralize/UserCentralize';
 export * from './Shopify/ShopShopify';
 export * from './Shopify/OrderShopify';
 export * from './Shopify/ProductShopify';
+export * from './Meli/AuthMeli';
+export * from './Meli/OrderMeli';
+export * from './Meli/ProductMeli';

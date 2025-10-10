@@ -35,3 +35,7 @@ __exportStar(require("./Centralize/UserCentralize"), exports);
 __exportStar(require("./Shopify/ShopShopify"), exports);
 __exportStar(require("./Shopify/OrderShopify"), exports);
 __exportStar(require("./Shopify/ProductShopify"), exports);
+// Meli
+__exportStar(require("./Meli/AuthMeli"), exports);
+__exportStar(require("./Meli/OrderMeli"), exports);
+__exportStar(require("./Meli/ProductMeli"), exports);

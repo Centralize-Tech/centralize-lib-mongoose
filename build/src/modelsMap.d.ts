@@ -17,4 +17,7 @@ export declare const modelCreatorsMap: {
     ShopShopify: typeof model.createShopShopifyModel;
     OrderShopify: typeof model.createOrderShopifyModel;
     ProductShopify: typeof model.createProductShopifyModel;
+    AuthMeli: typeof model.createAuthMeliModel;
+    OrderMeli: typeof model.createOrderMeliModel;
+    ProductMeli: typeof model.createProductMeliModel;
 };

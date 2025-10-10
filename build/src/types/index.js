@@ -35,3 +35,7 @@ __exportStar(require("./Centralize/IUserCentralize"), exports);
 __exportStar(require("./Shopify/IShopShopity"), exports);
 __exportStar(require("./Shopify/IProductShopify"), exports);
 __exportStar(require("./Shopify/IOrderShopify"), exports);
+// Meli
+__exportStar(require("./Meli/IAuthMeli"), exports);
+__exportStar(require("./Meli/IOrderMeli"), exports);
+__exportStar(require("./Meli/IProductsMeli"), exports);

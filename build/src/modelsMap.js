@@ -56,5 +56,9 @@ exports.modelCreatorsMap = {
     // Shopify
     ShopShopify: model.createShopShopifyModel,
     OrderShopify: model.createOrderShopifyModel,
-    ProductShopify: model.createProductShopifyModel
+    ProductShopify: model.createProductShopifyModel,
+    // Meli
+    AuthMeli: model.createAuthMeliModel,
+    OrderMeli: model.createOrderMeliModel,
+    ProductMeli: model.createProductMeliModel
 };

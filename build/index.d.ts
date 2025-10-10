@@ -15,5 +15,8 @@ export declare const ProductFalabella: any;
 export declare const ShopShopify: any;
 export declare const OrderShopify: any;
 export declare const ProductShopify: any;
+export declare const AuthMeli: any;
+export declare const OrderMeli: any;
+export declare const ProductMeli: any;
 export declare const EnterpriseCentralize: any;
 export declare const UserCentralize: any;

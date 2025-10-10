@@ -14,7 +14,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserCentralize = exports.EnterpriseCentralize = exports.ProductShopify = exports.OrderShopify = exports.ShopShopify = exports.ProductFalabella = exports.UserFalabella = exports.UserParis = exports.ProductParis = exports.OrderParis = exports.Users = exports.Order = exports.Buyer = exports.Enterprise = exports.Products = exports.Message = exports.OrderMarketplace = void 0;
+exports.UserCentralize = exports.EnterpriseCentralize = exports.ProductMeli = exports.OrderMeli = exports.AuthMeli = exports.ProductShopify = exports.OrderShopify = exports.ShopShopify = exports.ProductFalabella = exports.UserFalabella = exports.UserParis = exports.ProductParis = exports.OrderParis = exports.Users = exports.Order = exports.Buyer = exports.Enterprise = exports.Products = exports.Message = exports.OrderMarketplace = void 0;
 exports.setMarketplace = setMarketplace;
 const dbConnection_1 = require("./src/dbConnection");
 const modelsMap_1 = require("./src/modelsMap");
@@ -56,6 +56,10 @@ exports.ProductFalabella = createModelProxy('ProductFalabella');
 exports.ShopShopify = createModelProxy('ShopShopify');
 exports.OrderShopify = createModelProxy('OrderShopify');
 exports.ProductShopify = createModelProxy('ProductShopify');
+// Meli
+exports.AuthMeli = createModelProxy('AuthMeli');
+exports.OrderMeli = createModelProxy('OrderMeli');
+exports.ProductMeli = createModelProxy('ProductMeli');
 // Centralize
 exports.EnterpriseCentralize = createModelProxy('EnterpriseCentralize');
 exports.UserCentralize = createModelProxy('UserCentralize');

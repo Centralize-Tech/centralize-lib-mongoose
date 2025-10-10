@@ -14,5 +14,5 @@ exports.authMeliSchema = new mongoose_1.Schema({
     timestamps: true
 });
 function createAuthMeliModel(conn) {
-    return conn.model('AuthMeli', exports.authMeliSchema);
+    return conn.model('Auth', exports.authMeliSchema);
 }

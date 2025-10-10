@@ -48,6 +48,11 @@ export const ShopShopify = createModelProxy('ShopShopify')
 export const OrderShopify = createModelProxy('OrderShopify')
 export const ProductShopify = createModelProxy('ProductShopify')
 
+// Meli
+export const AuthMeli = createModelProxy('AuthMeli')
+export const OrderMeli = createModelProxy('OrderMeli')
+export const ProductMeli = createModelProxy('ProductMeli')
+
 // Centralize
 export const EnterpriseCentralize = createModelProxy('EnterpriseCentralize')
 export const UserCentralize = createModelProxy('UserCentralize')

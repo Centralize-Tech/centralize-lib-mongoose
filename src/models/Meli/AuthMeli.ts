@@ -16,5 +16,5 @@ export const authMeliSchema = new Schema<IAuthMeli>(
 )
 
 export function createAuthMeliModel(conn: Connection) {
-  return conn.model('AuthMeli', authMeliSchema)
+  return conn.model('Auth', authMeliSchema)
 }

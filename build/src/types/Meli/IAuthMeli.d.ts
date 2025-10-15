@@ -4,7 +4,7 @@ export interface IAuthMeli extends Document {
     token_type: string;
     expires_in: number;
     scope: string;
-    user: IUserPhone;
+    user: IAuthUser;
     refresh_token: string;
     token_create: Date;
 }

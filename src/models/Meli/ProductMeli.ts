@@ -36,8 +36,7 @@ export const productMeliSchema = new Schema<IProductMeli>({
   domain_id: { type: String, required: true },
   automatic_relist: { type: Boolean, required: true },
   date_created: { type: Date, required: true },
-  last_updated: { type: Date, required: true },
-  catalog_listing: { type: Boolean, required: true }
+  last_updated: { type: Date, required: true }
 })
 
 export function createProductMeliModel(conn: Connection) {

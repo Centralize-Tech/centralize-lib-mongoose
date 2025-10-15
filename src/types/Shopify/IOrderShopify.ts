@@ -14,7 +14,7 @@ export interface IOrderShopify extends Document {
   currency: string
   order_number: number
   processed_at: Date
-  contact_email: string
+  contact_email: string | null
   tax_exempt: boolean
   total_tax: string
   subtotal_price: string
@@ -24,7 +24,7 @@ export interface IOrderShopify extends Document {
   discount_codes: IDiscountCode[]
   discount_applications: IDiscountApplications[]
   financial_status: string
-  phone: string
+  phone: string | null
   total_weight: number
   customer: ICustomer
   shipping_address: IShippingAddress

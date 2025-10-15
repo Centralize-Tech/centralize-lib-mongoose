@@ -8,7 +8,7 @@ exports.authMeliSchema = new mongoose_1.Schema({
     token_type: { type: String, required: true },
     expires_in: { type: Number, required: true },
     scope: { type: String, required: true },
-    user_id: { type: Number, required: true },
+    user: { type: Object, required: true },
     refresh_token: { type: String, required: true }
 }, {
     timestamps: true

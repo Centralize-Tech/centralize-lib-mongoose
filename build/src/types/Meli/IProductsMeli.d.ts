@@ -35,7 +35,6 @@ export interface IProductMeli extends Document {
     automatic_relist: boolean;
     date_created: Date;
     last_updated: Date;
-    catalog_listing: boolean;
 }
 interface IAttribute {
     id: string;

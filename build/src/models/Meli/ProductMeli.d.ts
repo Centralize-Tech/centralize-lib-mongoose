@@ -1,24 +1,16 @@
 import { Connection, Schema } from 'mongoose';
 import { IProductMeli } from '../../types';
-export declare const productMeliSchema: Schema<IProductMeli, import("mongoose").Model<IProductMeli, any, any, any, import("mongoose").Document<unknown, any, IProductMeli, any, {}> & IProductMeli & Required<{
-    _id: unknown;
-}> & {
+export declare const productMeliSchema: Schema<IProductMeli, import("mongoose").Model<RawDocType, any, any, any, import("mongoose").IfAny<RawDocType, any, import("mongoose").Document<unknown, any, RawDocType, any, {}> & (import("mongoose").Require_id<RawDocType> extends infer T ? T extends import("mongoose").Require_id<RawDocType> ? T extends {
+    __v?: infer U;
+} ? T : T & {
     __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, IProductMeli, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<IProductMeli>, {}, import("mongoose").ResolveSchemaOptions<import("mongoose").DefaultSchemaOptions>> & import("mongoose").FlatRecord<IProductMeli> & Required<{
-    _id: unknown;
-}> & {
-    __v: number;
-}>;
+} : never : never)>, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, import("mongoose").ResolveTimestamps<import("mongoose").ObtainDocumentType<any, RawDocType, import("mongoose").ResolveSchemaOptions<TSchemaOptions>>, import("mongoose").ResolveSchemaOptions<TSchemaOptions>>, import("mongoose").IfAny<import("mongoose").FlatRecord<DocType>, any, TVirtuals & TInstanceMethods extends infer T_1 ? T_1 extends TVirtuals & TInstanceMethods ? T_1 extends Record<string, never> ? import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<DocType>, TVirtuals, import("mongoose").ResolveSchemaOptions<TSchemaOptions>> & import("mongoose").Default__v<import("mongoose").Require_id<import("mongoose").FlatRecord<DocType>>, import("mongoose").ResolveSchemaOptions<TSchemaOptions>> : import("mongoose").IfAny<T_1, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<DocType>, TVirtuals, import("mongoose").ResolveSchemaOptions<TSchemaOptions>> & import("mongoose").Default__v<import("mongoose").Require_id<import("mongoose").FlatRecord<DocType>>, import("mongoose").ResolveSchemaOptions<TSchemaOptions>>, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<DocType>, TVirtuals, import("mongoose").ResolveSchemaOptions<TSchemaOptions>> & Omit<import("mongoose").Default__v<import("mongoose").Require_id<import("mongoose").FlatRecord<DocType>>, import("mongoose").ResolveSchemaOptions<TSchemaOptions>>, keyof T_1> & T_1> : never : never>>;
 export declare function createProductMeliModel(conn: Connection): import("mongoose").Model<IProductMeli, {}, {}, {}, import("mongoose").Document<unknown, {}, IProductMeli, {}, {}> & IProductMeli & Required<{
     _id: unknown;
 }> & {
     __v: number;
-}, Schema<IProductMeli, import("mongoose").Model<IProductMeli, any, any, any, import("mongoose").Document<unknown, any, IProductMeli, any, {}> & IProductMeli & Required<{
-    _id: unknown;
-}> & {
+}, Schema<IProductMeli, import("mongoose").Model<RawDocType, any, any, any, import("mongoose").IfAny<RawDocType, any, import("mongoose").Document<unknown, any, RawDocType, any, {}> & (import("mongoose").Require_id<RawDocType> extends infer T ? T extends import("mongoose").Require_id<RawDocType> ? T extends {
+    __v?: infer U;
+} ? T : T & {
     __v: number;
-}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, IProductMeli, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<IProductMeli>, {}, import("mongoose").ResolveSchemaOptions<import("mongoose").DefaultSchemaOptions>> & import("mongoose").FlatRecord<IProductMeli> & Required<{
-    _id: unknown;
-}> & {
-    __v: number;
-}>>;
+} : never : never)>, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, import("mongoose").ResolveTimestamps<import("mongoose").ObtainDocumentType<any, RawDocType, import("mongoose").ResolveSchemaOptions<TSchemaOptions>>, import("mongoose").ResolveSchemaOptions<TSchemaOptions>>, import("mongoose").IfAny<import("mongoose").FlatRecord<DocType>, any, TVirtuals & TInstanceMethods extends infer T_1 ? T_1 extends TVirtuals & TInstanceMethods ? T_1 extends Record<string, never> ? import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<DocType>, TVirtuals, import("mongoose").ResolveSchemaOptions<TSchemaOptions>> & import("mongoose").Default__v<import("mongoose").Require_id<import("mongoose").FlatRecord<DocType>>, import("mongoose").ResolveSchemaOptions<TSchemaOptions>> : import("mongoose").IfAny<T_1, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<DocType>, TVirtuals, import("mongoose").ResolveSchemaOptions<TSchemaOptions>> & import("mongoose").Default__v<import("mongoose").Require_id<import("mongoose").FlatRecord<DocType>>, import("mongoose").ResolveSchemaOptions<TSchemaOptions>>, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<DocType>, TVirtuals, import("mongoose").ResolveSchemaOptions<TSchemaOptions>> & Omit<import("mongoose").Default__v<import("mongoose").Require_id<import("mongoose").FlatRecord<DocType>>, import("mongoose").ResolveSchemaOptions<TSchemaOptions>>, keyof T_1> & T_1> : never : never>>>;

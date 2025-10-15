@@ -2,25 +2,25 @@ import { Document } from 'mongoose'
 
 export interface IOrderMELI extends Document {
   id: number
-  date_created: Date
-  last_updated: Date
-  date_closed: Date
-  pack_id: number
-  buying_mode: string
-  total_amount: number
-  paid_amount: number
-  currency_id: string
-  payments: IPaymentOrderMELI[]
-  shipping: IShippingOrder
-  status: string
-  tags: string[]
-  internal_tags: string[]
-  static_tags: string[]
-  feedback: IFeedback
-  seller: ISellerShippingMELI
-  buyer: IBuyer
+  date_created: Date | null
+  last_updated: Date | null
+  date_closed: Date | null
+  pack_id: number | null
+  buying_mode: string | null
+  total_amount: number | null
+  paid_amount: number | null
+  currency_id: string | null
+  payments: IPaymentOrderMELI[] | null
+  shipping: IShippingOrder | null
+  status: string | null
+  tags: string[] | null
+  internal_tags: string[] | null
+  static_tags: string[] | null
+  feedback: IFeedback | null
+  seller: ISellerShippingMELI | null
+  buyer: IBuyer | null
   cancel_detail: ICancelDetail | null
-  order_request: IOrderRequest
+  order_request: IOrderRequest | null
 }
 
 interface IBuyer {

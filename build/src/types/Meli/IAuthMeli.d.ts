@@ -6,6 +6,7 @@ export interface IAuthMeli extends Document {
     scope: string;
     user: IUserPhone;
     refresh_token: string;
+    token_create: Date;
 }
 export interface IAuthUser {
     id: number;

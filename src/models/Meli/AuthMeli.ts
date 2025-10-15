@@ -8,7 +8,8 @@ export const authMeliSchema = new Schema<IAuthMeli>(
     expires_in: { type: Number, required: true },
     scope: { type: String, required: true },
     user: { type: Object, required: true },
-    refresh_token: { type: String, required: true }
+    refresh_token: { type: String, required: true },
+    token_create: { type: Date, required: true }
   },
   {
     timestamps: true

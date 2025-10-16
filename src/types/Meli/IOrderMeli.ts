@@ -125,7 +125,7 @@ interface ICancelDetail {
   date: Date
   application_id: number
 }
-interface IShippingOrder {
+export interface IShippingOrder {
   substatus_history: ISubstatusHistory[]
   snapshot_packing: ISnapshotPacking
   receiver_id: number

@@ -4,7 +4,7 @@ exports.productMeliSchema = void 0;
 exports.createProductMeliModel = createProductMeliModel;
 const mongoose_1 = require("mongoose");
 exports.productMeliSchema = new mongoose_1.Schema({
-    id: { type: String, required: true },
+    product_id: { type: String, required: true },
     title: { type: String, required: true },
     seller_id: { type: Number, required: true },
     category_id: { type: String, required: true },

@@ -1,7 +1,7 @@
 import { Document } from 'mongoose'
 
 export interface IProductMeli extends Document {
-  id: string
+  product_id: string
   title: string
   seller_id: number
   category_id: string

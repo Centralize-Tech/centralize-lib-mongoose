@@ -21,6 +21,8 @@ export interface IOrderMELI extends Document {
     buyer: IBuyer | null;
     cancel_detail: ICancelDetail | null;
     order_request: IOrderRequest | null;
+    order_last_updated: Date;
+    shipping_last_updated: Date;
 }
 interface IOrderItemMeli {
     item: IItemMeli;

@@ -3,7 +3,7 @@ import { IProductMeli } from '../../types'
 
 export const productMeliSchema = new Schema<IProductMeli>(
   {
-    product_id: { type: String, required: true },
+    product_id: { type: String, required: true, unique: true },
     title: { type: String, required: true },
     seller_id: { type: Number, required: true },
     category_id: { type: String, required: true },

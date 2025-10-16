@@ -8,6 +8,7 @@ export interface IOrderMELI extends Document {
     buying_mode: string | null;
     total_amount: number | null;
     paid_amount: number | null;
+    order_items: IOrderItemMeli[] | null;
     currency_id: string | null;
     payments: IPaymentOrderMELI[] | null;
     shipping: IShippingOrder | null;
@@ -20,6 +21,33 @@ export interface IOrderMELI extends Document {
     buyer: IBuyer | null;
     cancel_detail: ICancelDetail | null;
     order_request: IOrderRequest | null;
+}
+interface IOrderItemMeli {
+    item: IItemMeli;
+    quantity: number;
+    unit_price: number;
+    full_unit_price: number;
+    full_unit_price_currency_id: string;
+    currency_id: string;
+    listing_type_id: string;
+}
+interface IItemMeli {
+    id: string;
+    title: string;
+    category_id: string;
+    variation_id: number;
+    seller_custom_field: null;
+    variation_attributes: IVariationAttributeMeli[];
+    warranty: string;
+    condition: string;
+    seller_sku: string;
+    user_product_id: string;
+}
+interface IVariationAttributeMeli {
+    name: string;
+    id: string;
+    value_id: number;
+    value_name: string;
 }
 interface IBuyer {
     id: number;

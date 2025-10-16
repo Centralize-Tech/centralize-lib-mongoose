@@ -11,6 +11,7 @@ export const orderMeliSchema = new Schema<IOrderMELI>(
     buying_mode: { type: String },
     total_amount: { type: Number },
     paid_amount: { type: Number },
+    order_items: [{ type: Object }],
     currency_id: { type: String },
     payments: [{ type: Object }],
     shipping: { type: Object },

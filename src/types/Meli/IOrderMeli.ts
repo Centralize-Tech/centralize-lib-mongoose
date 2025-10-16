@@ -2,6 +2,7 @@ import { Document } from 'mongoose'
 
 export interface IOrderMELI extends Document {
   id: number
+  seller_id: number
   date_created: Date | null
   last_updated: Date | null
   date_closed: Date | null
@@ -22,8 +23,8 @@ export interface IOrderMELI extends Document {
   buyer: IBuyer | null
   cancel_detail: ICancelDetail | null
   order_request: IOrderRequest | null
-  order_last_updated: Date
-  shipping_last_updated: Date
+  order_last_updated: Date | null
+  shipping_last_updated: Date | null
 }
 
 interface IOrderItemMeli {

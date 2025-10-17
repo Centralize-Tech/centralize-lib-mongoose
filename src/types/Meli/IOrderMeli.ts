@@ -25,6 +25,7 @@ export interface IOrderMELI extends Document {
   order_request: IOrderRequest | null
   order_last_updated: Date | null
   shipping_last_updated: Date | null
+  enterprise_id: string
 }
 
 interface IOrderItemMeli {

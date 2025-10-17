@@ -8,6 +8,7 @@ export interface IAuthMeli extends Document {
   user: IAuthUser
   refresh_token: string
   token_create: Date
+  enterprise_id: string
 }
 
 export interface IAuthUser {

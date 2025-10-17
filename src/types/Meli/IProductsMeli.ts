@@ -36,6 +36,7 @@ export interface IProductMeli extends Document {
   automatic_relist: boolean
   date_created: Date
   last_updated: Date
+  enterprise_id: string
 }
 
 interface IAttribute {

@@ -26,7 +26,8 @@ exports.orderMeliSchema = new mongoose_1.Schema({
     cancel_detail: { type: Object },
     order_request: { type: Object },
     order_last_updated: { type: Date },
-    shipping_last_updated: { type: Date }
+    shipping_last_updated: { type: Date },
+    enterprise_id: { type: String, required: true }
 }, {
     timestamps: true
 });

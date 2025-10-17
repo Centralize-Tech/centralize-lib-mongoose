@@ -9,7 +9,8 @@ export const authMeliSchema = new Schema<IAuthMeli>(
     scope: { type: String, required: true },
     user: { type: Object, required: true },
     refresh_token: { type: String, required: true },
-    token_create: { type: Date, required: true }
+    token_create: { type: Date, required: true },
+    enterprise_id: { type: String, required: true }
   },
   {
     timestamps: true

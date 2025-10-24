@@ -35,7 +35,9 @@ exports.orderShopifySchema = new mongoose_1.Schema({
     total_outstanding: { type: String, required: true },
     total_price: { type: String, required: true },
     tracking: [{ type: Object }],
-    refunds: [{ type: Object }]
+    refunds: [{ type: Object }],
+    products: [{ type: Object, required: true }],
+    enterprise_id: { type: String, required: true }
 }, { timestamps: true });
 function createOrderShopifyModel(conn) {
     return conn.model('Order', exports.orderShopifySchema);

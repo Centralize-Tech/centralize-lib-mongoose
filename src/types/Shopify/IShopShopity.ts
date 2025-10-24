@@ -5,4 +5,5 @@ export interface IShopType extends Document {
   shop: string
   token: string
   scopes: string
+  enterprise_id: string
 }

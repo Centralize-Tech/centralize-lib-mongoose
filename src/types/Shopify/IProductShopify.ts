@@ -19,6 +19,7 @@ export interface IProductType extends Document {
   images: IImageProduct[]
   image: IImageProduct
   category: ICategoryProduct
+  enterprise_id: string
 }
 
 interface IVariantProduct {

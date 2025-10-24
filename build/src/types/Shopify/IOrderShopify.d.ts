@@ -13,6 +13,7 @@ export interface IOrderShopify extends Document {
     currency: string;
     order_number: number;
     processed_at: Date;
+    products: IProductShopify[];
     contact_email: string | null;
     tax_exempt: boolean;
     total_tax: string;
@@ -32,6 +33,28 @@ export interface IOrderShopify extends Document {
     total_price: string;
     tracking: ITrackingShopify[];
     refunds: IRefundShopify[];
+    enterprise_id: string;
+}
+interface IProductShopify {
+    id: number;
+    current_quantity: number;
+    fulfillable_quantity: number;
+    fulfillment_service: string;
+    gift_card: boolean;
+    name: string;
+    price: number;
+    product_exists: boolean;
+    product_id: number;
+    quantity: number;
+    requires_shipping: boolean;
+    sku: string;
+    taxable: boolean;
+    title: string;
+    total_discount: number;
+    variant_id: number;
+    variant_inventory_management: string;
+    variant_title: string | null;
+    vendor: string;
 }
 interface IDiscountCode {
     code: string;
